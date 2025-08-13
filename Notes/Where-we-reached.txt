@@ -1,0 +1,46 @@
+------------
+summery
+Where we reached in following topics: ?? طبعا ناهيك عن فكره قبل التحسين على معاد المحاضرة لمن مكنش في تركيز ومتلمش المعلمومات اساسا ولا الاسئلة والافكار - فدنيا قبل شهر اول سبوع ب سبعه ملخبطه - تنساش ملاحظات المحاضرات الي مركزناش فيها + المحاضرة الي محضرنهاش اساسا كانت تطبيقي يا في ستاك يا في كيو ...
+------------
+W5_Class.pdf >> reached until Lecture 2: Exercises
+Exercise Set 1: Inheritance Aug 11 reviewd it - until page 7... | part two - back as p02 axsos journy laters will continue...
+------------
+W6_Abstract_Interface_Exeception.pdf >>>> maybe i didn't touch 
+all before not touched to finish - i mean real practice not nany solve the assignments ...
+------------
+linked lists : 
+Sec 4.4: toString Method >> w2_linked_list.md 2025-06-20.pdf
+
+- 02DLL or variations one >> same as this one i forget about where i reached >> W3_List_Variations.pdf
+-----------
+in Stacks : reached to where i said i will practise the implemeintation with linked list laters on and i did practise the W4_Stack.pdf >> arraies until i meet malak and shes explained the implementation about the idea and the Nones was ok.
+so after that we reached to continues in this seaction in material >> Resizing Strategy (Homework Idea):
+------------
+in Queues : zero 
+------------
+in Trees : latest thing is  didn't started with it """ def delete(self, root, key):
+if root is None:
+return None
+if root.data == key:
+# Case 1: Node with
+"""
+------------
+
+in Graphs latest 00:45 minute video i didn't get it, was lowglucase and distractted.. 2 Aug, day
+# 3 Aug >> ex 01 from video watch the solustion y didn't see it ...
++ Ex03 idea from video... with doing implementation
+------------
+
+9 aug >> studied first three/4 pages from >>>/W8_Graphs.pdf >  until reached >>6. Graph Traversal Techniques 
+-- latest thing reached - didn't started yet >>6. Graph Traversal Techniques <<
+------------
+
+10 Aug -> محاضرة اللايف ضايع تماما في عالم موازي كنت  -- فيها الهافمن كود وقصص وبراكتس على سؤال jj
+
+------------
+
+
+
+
+
+

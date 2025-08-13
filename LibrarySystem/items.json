@@ -1,0 +1,8 @@
+[
+  {
+    "item_id": 1,
+    "title": "Python 101",
+    "author": "Author A",
+    "available": true,
+    "genre": "Programming",
+    "reserved_by": 
