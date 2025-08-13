@@ -9,7 +9,7 @@ W6_Abstract_Interface_Exeception.pdf >>>> maybe i didn't touch
 all before not touched to finish - i mean real practice not nany solve the assignments ...
 ------------
 linked lists : 
-Sec 4.4: toString Method >> w2_linked_list.md 2025-06-20.pdf
+Lecture 2: Exercises with Linked List >> w2_linked_list.md 2025-06-20.pdf
 
 - 02DLL or variations one >> same as this one i forget about where i reached >> W3_List_Variations.pdf
 -----------
