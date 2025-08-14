@@ -4,8 +4,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-
-    def append(self, value):
+    def append_to_end(self, value):
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -66,9 +65,9 @@ class LinkedList:
             current = current.next
             count += 1
                 
-    def find_middle_node(linked_list):
+    def find_middle_node(self):
         
-        head = linked_list.head
+        head = self.head
         if head is None:
             return None
 
@@ -80,3 +79,14 @@ class LinkedList:
             fast = fast.next.next
 
         return slow
+
+    @property
+    def retrieve(self):
+        current = self.head
+        while current != None:
+            print(current.data, end="-> ")
+            current = current.next
+        print("None", end="")
+        print("\n")
+        return self
+        

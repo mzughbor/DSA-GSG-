@@ -8,7 +8,7 @@ while current:
     current.prev, current.next = current.next, current.prev
     current = current.prev  # because we swapped next & prev
 head, tail = tail, head
- """
+"""
 
 class Node:
     def __init__(self, data):
@@ -125,37 +125,38 @@ class SLL:
             print("Sorry the index is wrong / didn't exist in SLL...")
         return self    
 
-#test
-t = SLL()
-t.add_to_front(6).add_to_front(5).add_to_front(4).retrieve
-t.add_to_front(3).add_to_front(2).add_to_front(1).retrieve
-t.reverse.retrieve.add_to_front(7).retrieve
-print("-----")
-t.add_to_front("kk")
-print(t.__str__())
-print("-----")
+if __name__ == "__main__":
+    #test
+    t = SLL()
+    t.add_to_front(6).add_to_front(5).add_to_front(4).retrieve
+    t.add_to_front(3).add_to_front(2).add_to_front(1).retrieve
+    t.reverse.retrieve.add_to_front(7).retrieve
+    print("-----")
+    t.add_to_front("kk")
+    print(t.__str__())
+    print("-----")
 
-# in case one element
-m = SLL()
-m.add_to_front("MMM").retrieve
-m.delete_from_end.retrieve
+    # in case one element
+    m = SLL()
+    m.add_to_front("MMM").retrieve
+    m.delete_from_end.retrieve
 
-print("-----")
-# in case two element
-mm = SLL()
-mm.add_to_front("m").add_to_front("mm").retrieve.delete_from_end.retrieve
+    print("-----")
+    # in case two element
+    mm = SLL()
+    mm.add_to_front("m").add_to_front("mm").retrieve.delete_from_end.retrieve
 
-print("-----")
-# in case three element
-mm = SLL()
-mm.add_to_front("m").add_to_front("mm").add_to_front("mmm").retrieve.delete_from_end.retrieve
+    print("-----")
+    # in case three element
+    mm = SLL()
+    mm.add_to_front("m").add_to_front("mm").add_to_front("mmm").retrieve.delete_from_end.retrieve
 
-print("Try deleteing from fisrt")
-mm.delete_at_start.retrieve #.delete_at_start.retrieve
+    print("Try deleteing from fisrt")
+    mm.delete_at_start.retrieve #.delete_at_start.retrieve
 
-print("-----")
-print("try deleting at spcifc index...")
-K = SLL()
-K.add_to_front("aya").add_to_front("ayat").add_to_front("ayman").add_to_front("ayham").retrieve
-K.delete_at(2).retrieve
+    print("-----")
+    print("try deleting at spcifc index...")
+    K = SLL()
+    K.add_to_front("aya").add_to_front("ayat").add_to_front("ayman").add_to_front("ayham").retrieve
+    K.delete_at(2).retrieve
 
