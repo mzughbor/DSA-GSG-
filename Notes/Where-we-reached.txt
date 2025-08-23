@@ -8,10 +8,8 @@ Exercise Set 1: Inheritance Aug 11 reviewd it - until page 7... | part two - bac
 W6_Abstract_Interface_Exeception.pdf >>>> maybe i didn't touch 
 all before not touched to finish - i mean real practice not nany solve the assignments ...
 ------------
-linked lists : 
-Lecture 2: Exercises with Linked List >> w2_linked_list.md 2025-06-20.pdf
-
-- 02DLL or variations one >> same as this one i forget about where i reached >> W3_List_Variations.pdf
+linked lists : Done >> w2_linked_list.md 2025-06-20.pdf
+- 02 DLL or variations one >> same as this one i forget about where i reached >> W3_List_Variations.pdf
 -----------
 in Stacks : reached to where i said i will practise the implemeintation with linked list laters on and i did practise the W4_Stack.pdf >> arraies until i meet malak and shes explained the implementation about the idea and the Nones was ok.
 so after that we reached to continues in this seaction in material >> Resizing Strategy (Homework Idea):
