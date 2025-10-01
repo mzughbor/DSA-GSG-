@@ -1,0 +1,81 @@
+What is Algorithm ?
+A set of step-by-step instructions to solve a specific problem.
+
+What is Data Structure is ?  It's a way of storing data and reaching it inside the computer..
+there is linear structures and non-linear structures.. linear data structure, data is arranged in a line, with each data element placed one after the other in sequence, Like Arrays, Linked Lists, Stacks and Queues.
+Non-linear such as trees and graphs, they do not arrange data sequentially. Instead hierarchical way or organizational logic.
+
+---
+> New ? Brute Force	? 
+A simple and straight forward way an algorithm can work by simply trying all possible solutions and then choosing the best one.
+--
+
+What is an Array?
+Data structure store data items of a similar type at adjacent memory locations. >> it's enables items of the same type to be easily located and accessed.
+
+What is a Linked List?
+Data structure liner type that store data items in a linear order, with each item connected to the next item in the list >> it's makes it easy to insert new items or delete existing items without having to shift the entire collection of data.
+
+Stacks
+Similar to queues, a stack data structure performs data operations in a predetermined order. However, instead of FIFO, stacks use the "LIFO" format, which stands for "last in, first out." The last data item to be added will be the first to be removed.
+Uses: Stacks can be used to help ensure the correct opening and closing of brackets or tags in computer codes, track recent browser history or undo recent operations in an application.
+
+Queues
+A queue data structure performs data operations in a predetermined order called "FIFO" for "first in, first out." This means that the first data item to be added will be the first to be removed. Programmers often use this data structure to create priority queues, which are similar to waiting lists.
+Uses: Queue data structures can be used to determine the next song in a playlist, the next user to have access to a shared printer or the next call to be answered in a call center.
+
+Trees
+A tree data structure, sometimes called a prefix tree, is useful for establishing hierarchical relationships among data elements. A single parent node sits on the top of the tree structure, with child subnodes branching out on subsequent levels beneath it.
+Different classes of trees, such as binary search trees, AVL trees and b-trees, have different properties and support different functions. For example, in a binary search tree, each node has at most 2 children. This structure helps support fast searches of data sets. 
+
+Graphs
+A graph data structure organizes the relationships between different objects by using vertices and edges. Vertices are data points "represented" by dots, and edges are lines that connect the vertices.
+For example, on a map, the cities would be vertices and the roads that connect them would be edges. On Facebook, users would be vertices and the friendships that connect them would be edges.
+
+Hash
+A hash data structure, sometimes called a "hash table" or "hash map", uses a hash function to store data values. The hash function creates a hash, which is a unique digital key that corresponds to the location of a specific data value in memory.
+The hash table contains a searchable index of every hash and data value pair, which makes it quick and easy to access, add and remove data from the table.
+
+-------------------------
+.. Array's Sorting ..
+-------------------------
+
+# Bubble Sort as a Function
+
+	Space complexity: O(1)
+	Worst-case and Average-case time complexity: O(n^2)
+	Best-case time complexity: O(n)
+
+def bubble_sort(arr):
+	n = len(arr)
+	for i in range(n):
+		for j in range(0, n - i - 1):
+			if arr[j] > arr[j + 1]:
+				arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+numbers = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(numbers)
+print("Sorted array:", numbers)
+
+-------------------------
+
+
+-------------------------
+
+
+-------------------------
+
+
+-------------------------
+
+
+-------------------------
+
+
+-------------------------
+
+
+-------------------------
+
+
+-------------------------

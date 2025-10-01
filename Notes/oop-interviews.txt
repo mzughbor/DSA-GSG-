@@ -1,0 +1,32 @@
+- python multiple inhiertance vs. java single inheritance [so need interface to do this]
+- abstract vs. interface [interface just abstract method to override it later in children classes [no implementation]]
+
+What is OOP ?
+it's a techinech to write clean code readable, maintable code thats achieved by applaying classes and objects basically, ... 
+
+we doing that through using four pillers - concepts ...
+
+1- Inheritanc : it's a way that allow you to have the features from the parent class to reuse code by extending classes.
+
+2- Abstraction : it's a process to hide complex detilas and showing only essential features.
+
+3- Polymorphism : the ability of objects to take on many forms for the same intity so, respond to the same interface differently.
+
+4- Encapsulation : the concept of restricting direct access to some components - like wrapper to protect the inner data. 
+
+----
+
+Types of Polymorphism:
+Compile-time (Method Overloading): Not supported in Python directly, can be mimicked. by using deafult and args* ...
+Runtime (Method Overriding): Supported through inheritance with the abstraction ABC ...
+
+--
+What is abstract class ?
+it's a class cannot be instantiated directly and any subclass inheriting from an abstract class must implement all its abstract methods.
+
+--
+What is an interface ?
+An interface defines a contract (a set of methods) that implementing classes must follow. Interfaces are used to specify what a class must do, but not how it does it.
+
+--
+

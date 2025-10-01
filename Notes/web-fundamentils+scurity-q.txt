@@ -1,0 +1,188 @@
+مراجعه سريعه قبل مندخل المقابلة... web fundamentls
+----------------------------------------------
+API request lifecycle step by step?
+1- Client (frontend) sends a request with method, URL, headers, and body.
+2- Server receives request and routes it to the correct handler.
+3- Server may validate data and check authentication/authorization.
+4- Server interacts with the database or business logic. if needed
+5- Server creates a response (status code, headers, body).
+6- Response is sent back to the client.
+7- Client shows or processes the data.
+
+--What happens when you type a URL in the browser? -- the only extra thing matter to mention after browser send the http req is >>>   DNS resolves the domain to an IP.
+----------------------------------------------
+
+📬 HTTP Headers
+🔹 What are HTTP headers?
+----------------------------------------------
+Answer:
+"Headers are key-value pairs sent in requests and responses to give extra information. For example, Content-Type: application/json tells the server the request body is JSON."
+----
+🔹 Common request headers?
+Content-Type → format of the body (JSON, form data, etc.)
+Accept → what format client wants in response (e.g., JSON)
+Authorization → token or credentials
+Cookie → session info
+----
+🔹 Common response headers?
+Content-Type → format of response body
+Set-Cookie → send cookies to the client
+Cache-Control → how long the response can be cached
+Access-Control-Allow-Origin → CORS rule
+
+----------------------------------------------
+🔹 What is the difference between synchronous and asynchronous API requests?
+----------------------------------------------
+Answer:
+
+Synchronous: Client waits for server response before moving on.
+Asynchronous: Client sends request and can keep working; response is handled later (e.g., AJAX, fetch in JavaScript).
+
+----------------------------------------------
+** HTTP request **
+🔹 What is the HTTP request–response cycle?
+Answer:
+
+"When a client (like a browser or mobile app) sends a request to the server, the server processes it and sends back a response.
+The request includes a URL, method (GET/POST/etc.), headers, and sometimes body data.
+The server looks at the request, interacts with the database if needed, and prepares a response.
+The response includes a status code, headers, and data (like JSON or HTML)."
+
+----------------------------------------------
+🔹 What are the main parts of an HTTP request?
+
+Answer:
+Method → GET, POST, PUT, DELETE
+URL → identifies the resource (/users/1)
+Headers → extra info like Content-Type or Authorization
+Body → data sent with the request (e.g., form data or JSON in POST/PUT)
+
+🔹 What are the main parts of an HTTP response?
+
+Answer:
+Status code (200, 404, 500, etc.)
+Headers (e.g., Content-Type: application/json)
+Body (the actual data, usually JSON in APIs)
+
+----------------------------------------------
+🔹 What is CORS?
+----------------------------------------------
+Answer:
+"CORS stands for Cross-Origin Resource Sharing. It’s a security feature in browsers that blocks frontend apps from calling APIs hosted on a different domain unless the server explicitly allows it. The server does this by sending special headers like Access-Control-Allow-Origin."
+
+🔹 Why do we need CORS?
+----------------------------------------------
+Answer:
+"Without CORS, any website could secretly make requests to other sites on your behalf, which would be a security risk. CORS ensures that only trusted origins (domains) are allowed to access an API."
+
+
+🔹 What is a preflight request?
+----------------------------------------------
+Answer:
+"When you send a request that isn’t simple (like using PUT, DELETE, or custom headers), the browser first sends an OPTIONS request to check if the server allows it. This is called a CORS preflight request."
+
+
+----------------------------------------------
+What is statless request ?
+Stateless means the server doesn’t remember previous requests. Each request must include everything needed, like authentication tokens and data
+
+----------------------------------------------
+🔹 What’s the difference between authentication and authorization in APIs?
+"Authentication is checking who you are (like login with username/password or token). Authorization is checking what you can do (like if this user is allowed to access /admin)."
+
+----------------------------------------------
+** Request Types **
+🔹 What is the difference between PUT and PATCH?
+PUT replaces the whole resource with new data, while PATCH updates only part of the resource.
+
+----------------------------------------------
+** What is RESTful API? **
+REST stands for Representational State Transfer.
+A RESTful API is a way for two systems (like frontend and backend) to communicate over HTTP using standard rules.
+----
+GraphQL lets clients ask for exactly the data they need in one query
+
+----------------------------------------------
+** Cookies VS Sessions** 
+Use Cookies When >> ... stateless authentication like JWT-based login and want to store user preferences and settings
+Use Sessions When >> store data on the [server-side] >> stateful authentication like login sessions and to avoid exposing data to the client for security reasons...
+
+-----------------------------------------------
+🔐 Common Security Questions for Joiner-Level Interviews
+-----------------------------------------------
+🔹 1. What is SQL Injection?
+
+Answer:
+"SQL Injection happens when an attacker sends malicious SQL code through input fields, like a login form, to access or modify the database.
+For example: entering admin' OR '1'='1 in a login box.
+We prevent it by using prepared statements / parameterized queries instead of directly inserting user input into SQL."
+
+-----------------------------------------------
+🔹 2. What is XSS (Cross-Site Scripting)?
+
+Answer:
+"XSS happens when an attacker injects malicious JavaScript into a website, and it runs in another user’s browser.
+For example: posting <script>alert('Hacked')</script> in a comment box.
+We prevent it by sanitizing and escaping user input before showing it in HTML."
+
+-----------------------------------------------
+🔹 3. What is CSRF (Cross-Site Request Forgery)?
+
+Answer:
+"CSRF tricks a logged-in user into sending a request they didn’t intend, like transferring money.
+For example: a malicious link that automatically triggers /transfer?amount=1000.
+We prevent it by using CSRF tokens and checking request origins."
+
+-----------------------------------------------
+🔹 4. What’s the difference between Authentication and Authorization?
+
+Answer:
+
+Authentication = proving who you are (login, password, token).
+
+Authorization = proving what you can do (permissions, roles).
+
+-----------------------------------------------
+🔹 5. What is Clickjacking?
+
+Answer:
+"Clickjacking is when an attacker overlays an invisible frame over a real website to trick a user into clicking something they didn’t mean to.
+We prevent it by setting the X-Frame-Options: DENY header."
+
+-----------------------------------------------
+🔹 6. Why is HTTPS important?
+
+Answer:
+"HTTPS encrypts communication between client and server, preventing attackers from reading or modifying data in transit. Without HTTPS, sensitive data like passwords can be stolen."
+
+-----------------------------------------------
+🔹 7. What is a Man-in-the-Middle (MITM) attack?
+
+Answer:
+"It’s when an attacker intercepts communication between client and server.
+HTTPS + SSL/TLS certificates help protect against MITM."
+
+-----------------------------------------------
+🔹 8. What are API security best practices?
+
+Answer (simple list):
+
+Always use HTTPS
+Validate and sanitize inputs
+Use authentication (tokens, OAuth)
+Apply authorization checks
+Use rate limiting to prevent abuse
+Don’t expose sensitive data in responses
+
+-----------------------------------------------
+🎯 Key Takeaway
+
+For a junior interview, the most common security Qs are:
+
+SQL Injection
+XSS
+CSRF
+HTTPS vs HTTP
+Authentication vs Authorization
+Common HTTP headers for security (Authorization, X-Frame-Options, Content-Security-Policy)
+

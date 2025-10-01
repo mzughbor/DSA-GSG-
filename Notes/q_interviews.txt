@@ -1,3 +1,0 @@
-- inheritance vs polomorohsim vs. abstract
-- python multiple inhiertance vs. java single inheritance [so need interface to do this]
-- abstract vs. interface [interface just abstract method to override it later in children classes [no implementation]]
