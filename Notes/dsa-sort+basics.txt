@@ -6,10 +6,12 @@ there is linear structures and non-linear structures.. linear data structure, da
 Non-linear such as trees and graphs, they do not arrange data sequentially. Instead hierarchical way or organizational logic.
 
 ---
-> New ? Brute Force	? 
+New ? Brute Force >	? 
 A simple and straight forward way an algorithm can work by simply trying all possible solutions and then choosing the best one.
---
+Greedy ? Approach > ? 
+The algorithm makes the best choice at each step, hoping that these local best choices lead to the global best solution
 
+---
 What is an Array?
 Data structure store data items of a similar type at adjacent memory locations. >> it's enables items of the same type to be easily located and accessed.
 
@@ -17,8 +19,11 @@ What is a Linked List?
 Data structure liner type that store data items in a linear order, with each item connected to the next item in the list >> it's makes it easy to insert new items or delete existing items without having to shift the entire collection of data.
 
 Stacks
-Similar to queues, a stack data structure performs data operations in a predetermined order. However, instead of FIFO, stacks use the "LIFO" format, which stands for "last in, first out." The last data item to be added will be the first to be removed.
+What is a Stack?
+Abstract data type representing a collection of elements. - Follows the LIFO principle (Last In, First Out).
 Uses: Stacks can be used to help ensure the correct opening and closing of brackets or tags in computer codes, track recent browser history or undo recent operations in an application.
+
+[implelemt through arry both / and through each others] 1pm-2pm > 1H
 
 Queues
 A queue data structure performs data operations in a predetermined order called "FIFO" for "first in, first out." This means that the first data item to be added will be the first to be removed. Programmers often use this data structure to create priority queues, which are similar to waiting lists.
@@ -36,46 +41,145 @@ Hash
 A hash data structure, sometimes called a "hash table" or "hash map", uses a hash function to store data values. The hash function creates a hash, which is a unique digital key that corresponds to the location of a specific data value in memory.
 The hash table contains a searchable index of every hash and data value pair, which makes it quick and easy to access, add and remove data from the table.
 
+
+--------------------------------------------------
+.. Array's .. Sorting ..
+--------------------------------------------------
+
+Bubble Sort
 -------------------------
-.. Array's Sorting ..
+Time Complexity: Best Case: O(n) - Worst Case: O(n²)
+Space Complexity: O(1)
 -------------------------
-
-# Bubble Sort as a Function
-
-	Space complexity: O(1)
-	Worst-case and Average-case time complexity: O(n^2)
-	Best-case time complexity: O(n)
-
 def bubble_sort(arr):
 	n = len(arr)
 	for i in range(n):
 		for j in range(0, n - i - 1):
 			if arr[j] > arr[j + 1]:
 				arr[j], arr[j + 1] = arr[j + 1], arr[j]
-
+	return arr
 numbers = [64, 34, 25, 12, 22, 11, 90]
 bubble_sort(numbers)
 print("Sorted array:", numbers)
 
+
+-------------------------
+Selection Sort
+-------------------------
+Best Case: O(n²) - Worst Case: O(n²)
+Space Complexity: O(1)
+-------------------------
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_index = i
+        for j in range(i+1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]  # Swap
+    return arr
+
+print(selection_sort([64, 25, 12, 22, 11]))
+
+
+-------------------------
+Insertion Sort
+-------------------------
+Best Case: O(n) - Worst Case: O(n²)
+Space Complexity: O(1)
+-------------------------
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:  
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = key
+    return arr
+
+print(insertion_sort([12, 11, 13, 5, 6]))
+
+
+-------------------------
+Quick Sort
+-------------------------
+Best Case: O(n log n) - Worst Case: O(n²)
+Space Complexity: O(log n) (recursive calls)
+-------------------------
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr)//2]   # choose middle element
+	left = [x for x in arr if x < pivot]	#is a Python list comprehension. It creates a new list called left
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
+
+print(quick_sort([10, 7, 8, 9, 1, 5]))
+
+
+-------------------------
+Linear Search
+-------------------------
+Best Case: O(1) - Worst Case: O(n)
+Space Complexity: O(1)
+-------------------------
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Found
+    return -1  # Not found
+print(linear_search([10, 20, 30, 40, 50], 30))
+
+
+-------------------------
+Binary Search - (only works on sorted array)
+-------------------------
+Time Complexity: Best Case: O(1) - Worst Case: O(log N). 
+Space Complexity: Iterative Binary Search: O(1).
+-------------------------
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+print(binary_search([10, 20, 30, 40, 50], 30))
+
 -------------------------
 
 
--------------------------
 
+## Quick Sort --- main idea ----
 
--------------------------
+def partition(array, low, high):
+    pivot = array[high]
+    i = low - 1
 
+    for j in range(low, high):
+        if array[j] <= pivot:
+            i += 1
+            array[i], array[j] = array[j], array[i]
 
--------------------------
+    array[i+1], array[high] = array[high], array[i+1]
+    return i+1
 
+def quicksort(array, low=0, high=None):
+    if high is None:
+        high = len(array) - 1
 
--------------------------
+    if low < high:
+        pivot_index = partition(array, low, high)
+        quicksort(array, low, pivot_index-1)
+        quicksort(array, pivot_index+1, high)
 
+my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+quicksort(my_array)
+print("Sorted array:", my_array)
 
--------------------------
-
-
--------------------------
-
-
--------------------------
