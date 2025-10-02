@@ -11,4 +11,6 @@ class FifoUsingLifo:
         self.inStack.append(value)
 
     def dequeue(self):
-        
+        if not self.outStack:
+            while self.inStack:
+                self.outStack.append(self.inStack.pop())

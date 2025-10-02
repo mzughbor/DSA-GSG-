@@ -15,7 +15,7 @@ The algorithm makes the best choice at each step, hoping that these local best c
 What is an Array?
 Data structure store data items of a similar type at adjacent memory locations. >> it's enables items of the same type to be easily located and accessed.
 
-What is a Linked List?
+What is a Linked List? ->(without shift elements)
 Data structure liner type that store data items in a linear order, with each item connected to the next item in the list >> it's makes it easy to insert new items or delete existing items without having to shift the entire collection of data.
 
 Stacks
@@ -23,24 +23,32 @@ What is a Stack?
 Abstract data type representing a collection of elements. - Follows the LIFO principle (Last In, First Out).
 Uses: Stacks can be used to help ensure the correct opening and closing of brackets or tags in computer codes, track recent browser history or undo recent operations in an application.
 
-		[implelemt through arry both / and through each others] 1pm-2pm > 1H
 
 Queues
 A queue data structure performs data operations in a predetermined order called "FIFO" for "first in, first out." This means that the first data item to be added will be the first to be removed. Programmers often use this data structure to create priority queues, which are similar to waiting lists.
 Uses: Queue data structures can be used to determine the next song in a playlist, the next user to have access to a shared printer or the next call to be answered in a call center.
 
-Trees
+Trees:
 A tree data structure used for hierarchical relationships among data elements- they nodes.
 
-Balanced it's about >> Height difference between left and right subtree is small.
-Binary it's about >> Each node has at most two children.
+complete binary tree > it's about > All levels are filled except possibly the last, filled left to right. (be heap!)
+
+Balanced it's about >> Height difference between left and right subtree is small. (1)
+Binary it's about >> Each node has at most two children. (2) to be AVL.
+ 
 AVL : self-balancing binary search tree (BST).
 
-Graphs
-A graph data structure organizes the relationships between different objects by using vertices and edges. Vertices are data points "represented" by dots, and edges are lines that connect the vertices.
-For example, on a map, the cities would be vertices and the roads that connect them would be edges. On Facebook, users would be vertices and the friendships that connect them would be edges.
+Graphs:
+A collection of vertices (nodes) and edges (connections between nodes). organizes the relationships between different objects by using vertices and edges. Vertices are data points "represented" by dots, and edges are lines that connect the vertices.
+For example, on a map, the cities would be vertices and the roads that connect them would be edges. 
 
-Hash
+Heaps:
+A heap is a tree-based data structure that supports efficient retrieval of the highest priority element. We
+usually implement it as a complete binary tree stored in an array. A priority queue is an abstract data type
+that exposes operations like insert and extract-min or extract-max, and a heap is a standard way to
+implement it.
+
+Hash:
 A hash data structure, sometimes called a "hash table" or "hash map", uses a hash function to store data values. The hash function creates a hash, which is a unique digital key that corresponds to the location of a specific data value in memory.
 The hash table contains a searchable index of every hash and data value pair, which makes it quick and easy to access, add and remove data from the table.
 
@@ -185,4 +193,8 @@ def quicksort(array, low=0, high=None):
 my_array = [64, 34, 25, 12, 22, 11, 90, 5]
 quicksort(my_array)
 print("Sorted array:", my_array)
+
+
+
+---------------------------------
 
