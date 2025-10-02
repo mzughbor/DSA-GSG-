@@ -56,7 +56,7 @@ def infix_to_postfix(expression):
             operator_stack.pop()
         else:
             while (not operator_stack.is_empty() and operator_stack.peek() != '(' and
-                   precedence.get(token, 0) <= precedence.get(operator_stack.peek(), 0)):
+                    precedence.get(token, 0) <= precedence.get(operator_stack.peek(), 0)):
                 output.append(operator_stack.pop())
             operator_stack.push(token)
 

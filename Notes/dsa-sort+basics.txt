@@ -23,15 +23,18 @@ What is a Stack?
 Abstract data type representing a collection of elements. - Follows the LIFO principle (Last In, First Out).
 Uses: Stacks can be used to help ensure the correct opening and closing of brackets or tags in computer codes, track recent browser history or undo recent operations in an application.
 
-[implelemt through arry both / and through each others] 1pm-2pm > 1H
+		[implelemt through arry both / and through each others] 1pm-2pm > 1H
 
 Queues
 A queue data structure performs data operations in a predetermined order called "FIFO" for "first in, first out." This means that the first data item to be added will be the first to be removed. Programmers often use this data structure to create priority queues, which are similar to waiting lists.
 Uses: Queue data structures can be used to determine the next song in a playlist, the next user to have access to a shared printer or the next call to be answered in a call center.
 
 Trees
-A tree data structure, sometimes called a prefix tree, is useful for establishing hierarchical relationships among data elements. A single parent node sits on the top of the tree structure, with child subnodes branching out on subsequent levels beneath it.
-Different classes of trees, such as binary search trees, AVL trees and b-trees, have different properties and support different functions. For example, in a binary search tree, each node has at most 2 children. This structure helps support fast searches of data sets. 
+A tree data structure used for hierarchical relationships among data elements- they nodes.
+
+Balanced it's about >> Height difference between left and right subtree is small.
+Binary it's about >> Each node has at most two children.
+AVL : self-balancing binary search tree (BST).
 
 Graphs
 A graph data structure organizes the relationships between different objects by using vertices and edges. Vertices are data points "represented" by dots, and edges are lines that connect the vertices.
